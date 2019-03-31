@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			h1{
+				border:5px solid purple;
+				color: rgb(6, 6, 110);
+				padding:20px;
+				margin:20px;
+				text-align: center;
+			}
+			h3{
+				color: yellow;
+				padding:10px;
+				margin:10px;
+				text-align: center;
+			}
+			.body_content{
+				width: 95%;
+				height: auto;
+				border: 10px solid green;
+				padding: 20px;
+				margin: 10px;
+				background-image: url("board3.jpg"); 
+				background-repeat: no-repeat;
+				background-size:contain;
+				background-position:center;
+				
+			}
+			* {
+  			box-sizing: border-box;
+				}
+			.column {
+  			float: left;
+  			width: 50%;
+  			padding: 10px;
+			}
+			.row:after {
+ 	 			content: "";
+  			display: table;
+  			clear: both;
+			}
+			label {
+				background-color: 	 rgba(206, 206, 151, 0.699);
+				color: black;
+				padding: 10px 10px 10px 0;
+				display: inline-block;
+			}
+			input[type=text], select, textarea {
+    		width: 100%;
+    		padding: 12px;
+    		border: 1px solid #e6e6e6;
+    		border-radius: 5px;
+    		box-sizing: border-box;
+    		margin-top: 6px;
+    		margin-bottom: 16px;
+    		resize: center;
+			}
+
+			input[type=submit] {
+    		background-color: 	 #262626;
+    		color: white;
+				width: 100%;
+    		padding: 12px ;
+    		border: none;
+    		border-radius: 5px;
+    		cursor: pointer;
+				text-align: center;
+				resize: center;
+			}
+			.container {
+    		border-radius: 7px;
+    		padding: 20px;
+			}
+		</style>
+	</head>
+<body>
+	<header> 
+		<h1> Board Games </h1>	
+	</header>
+	<hr/>
+	
+	<div class="body_content">
+		<h3> Contact Form</h3>
+		<div class="container">
+    <form action="/action_page.php">
+		<div class="row">
+			<div class="column">
+				<label for="fname">First Name</label>
+    		<input type="text" id="fname" name="firstname" placeholder="Your name..">
+			</div>
+			<div class="column">   
+      	<label for="lname">Last Name</label>  
+      	<input type="text" id="lname" name="lastname" placeholder="Your last name..">   
+			</div>
+		</div>
+		<div class="row">
+    	<div class="column">
+      	<label for="country">Country</label>   
+      	<select id="country" name="country">
+        	<option value="india">India</option>
+        	<option value="canada">Canada</option>
+        	<option value="usa">USA</option>
+      	</select>
+			</div>
+			<div class="column">
+    			<label for="bgame">Your favorite Board Game</label>
+    			<select id="bgame" name="bgame">
+      			<option value="ludo">Ludo</option>
+      			<option value="snlad">Snakes and Ladders</option>
+      			<option value="bcgm">Backgammon</option>
+	  				<option value="other">Other</option>
+    			</select>
+			</div>
+		</div>
+		<div class="row">
+			<input type="submit" value="Submit">
+		</div>
+		</form>
+		</div>
+	</div>
+		<hr/>
+		<footer>
+			<p>Copyright &copy; Board games&trade; 2018</p>
+			<p>Made with &hearts; in India</p>
+		</footer>
+	</body>	
+</html>
